@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pruthvi Patel | .NET Developer Portfolio | ASP.NET Core Expert</title>
+  <meta name="description" content="Professional portfolio of Pruthvi Patel, .NET Developer specializing in ASP.NET Core MVC, C#, and web application development. Explore my projects and skills.">
+  <meta name="keywords" content=".NET Developer, ASP.NET Core, C#, MVC, Portfolio, Web Developer, Pruthvi Patel">
+  <meta name="author" content="Pruthvi Patel">
+  <link rel="canonical" href="https://yourportfolio.com" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Pruthvi Patel | .NET Developer Portfolio">
+  <meta property="og:description" content="Professional portfolio of Pruthvi Patel, .NET Developer specializing in ASP.NET Core MVC">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourportfolio.com">
+  <!-- Add your image URL here -->
+  <meta property="og:image" content="https://yourportfolio.com/images/profile.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  
+  <!-- Animate.css -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #0ea5e9;
+      --secondary-color: #38bdf8;
+      --accent-color: #7dd3fc;
+      --dark-bg: #0f172a;
+      --darker-bg: #0a0f1f;
+      --card-bg: #1e293b;
+      --text-color: #ffffff; /* Changed to pure white */
+      --text-muted: rgba(255, 255, 255, 0.7); /* Enhanced muted color for secondary text */
+      --heading-gradient-start: #38bdf8; /* New gradient start for headings */
+      --heading-gradient-end: #7dd3fc; /* New gradient end for headings */
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(56, 189, 248, 0.1) 0%, transparent 20%);
+    }
+    
+    /* Apply white color to all text elements */
+    body, h1, h2, h3, h4, h5, h6, p, span, li, a, button, input, textarea, label, small, .text-muted {
+      color: #ffffff !important;
+    }
+    
+    /* Placeholder text styling */
+    ::placeholder {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+    
+    /* Project card text */
+    .project-card, .project-card * {
+      color: #ffffff !important;
+    }
+    
+    /* Timeline item text */
+    .timeline-item, .timeline-item * {
+      color: #ffffff !important;
+    }
+    
+    /* Experience card text */
+    .experience-card, .experience-card * {
+      color: #ffffff !important;
+    }
+    
+    /* Contact card text */
+    .contact-card, .contact-card * {
+      color: #ffffff !important;
+    }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #0a0f1f;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    header, footer {
+      background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    a:hover {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    
+    .nav-pills .nav-link.active {
+      background-color: var(--primary-color);
+    }
+    
+    .section {
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .section-title {
+      position: relative;
+      margin-bottom: 50px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      /* New gradient for section titles */
+      background: linear-gradient(135deg, var(--heading-gradient-start), var(--heading-gradient-end));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--accent-color);
+      border-radius: 3px;
+    }
+    
+    /* Enhanced heading colors */
+    h1, h2, h3, h4, h5, h6 {
+      color: white; /* Clean white for all headings */
+    }
+    
+    /* Lead paragraph styling */
+    .lead {
+      font-weight: 400;
+    }
+    
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border: 5px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: all 0.5s ease;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      padding: 5px;
+    }
+    
+    .profile-img:hover {
+      transform: scale(1.05) rotate(5deg);
+      box-shadow: 0 15px 40px rgba(14, 165, 233, 0.3);
+    }
+    
+    .project-card {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      transition: all 0.4s ease;
+      overflow: hidden;
+      cursor: pointer;
+      height: 100%;
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(14, 165, 233, 0.2);
+      border-color: rgba(14, 165, 233, 0.3);
+    }
+    
+    .project-card .card-body {
+      padding: 25px;
+    }
+    
+    .description-box {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      background: rgba(14, 165, 233, 0.05);
+      border-radius: 0 0 10px 10px;
+    }
+    
+    .description-box.show {
+      max-height: 300px;
+      padding: 15px;
+      margin-top: 15px;
+    }
+    
+    .skill-badge {
+      background: rgba(14, 165, 233, 0.15);
+      color: var(--text-color);
+      padding: 8px 15px;
+      border-radius: 50px;
+      margin: 5px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+    
+    .skill-badge:hover {
+      background: rgba(14, 165, 233, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.2);
+    }
+    
+    .timeline {
+      position: relative;
+      padding-left: 50px;
+    }
+    
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--primary-color);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 8px 20px rgba(14, 165, 233, 0.2);
+    }
+    
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: -38px;
+      top: 25px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      border: 3px solid var(--dark-bg);
+      box-shadow: 0 0 0 3px var(--primary-color);
+    }
+    
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: rgba(14, 165, 233, 0.15);
+      color: var(--text-color);
+      border-radius: 50%;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+    
+    .social-icon:hover {
+      background: rgba(14, 165, 233, 0.3);
+      transform: translateY(-5px) rotate(5deg);
+      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.2);
+    }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    /* Particles.js background */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background: var(--secondary-color);
+      transform: translateY(-5px);
+    }
+    
+    /* WhatsApp button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    
+    /* Download CV button */
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
+      border: none;
+    }
+    
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
+      color: white;
+    }
+    
+    /* Glow effect */
+    .glow {
+      text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    }
+    
+    /* Animated background elements */
+    .bg-blob {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      background: linear-gradient(45deg, rgba(14, 165, 233, 0.1), rgba(56, 189, 248, 0.1));
+      filter: blur(50px);
+      z-index: -1;
+      opacity: 0.5;
+    }
+    
+    .bg-blob-1 {
+      top: 10%;
+      left: -10%;
+      animation: moveBlob1 20s infinite alternate;
+    }
+    
+    .bg-blob-2 {
+      bottom: 10%;
+      right: -10%;
+      animation: moveBlob2 25s infinite alternate;
+    }
+    
+    @keyframes moveBlob1 {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(100px, 150px) rotate(360deg); }
+    }
+    
+    @keyframes moveBlob2 {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(-150px, -100px) rotate(360deg); }
+    }
+    
+    /* Enhanced Contact Section */
+    #contact .contact-card {
+      background: rgba(30, 41, 59, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(125, 211, 252, 0.3);
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(14, 165, 233, 0.2);
+      overflow: hidden;
+    }
+    
+    .contact-info {
+      padding: 30px;
+    }
+    
+    .contact-info h4 {
+      border-bottom: 2px solid rgba(125, 211, 252, 0.3);
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+    
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 12px 15px;
+      background: rgba(14, 165, 233, 0.1);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-detail:hover {
+      background: rgba(14, 165, 233, 0.2);
+      transform: translateY(-3px);
+    }
+    
+    .contact-detail i {
+      width: 40px;
+      height: 40px;
+      background: rgba(14, 165, 233, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      font-size: 18px;
+    }
+    
+    /* Enhanced Experience Section */
+    .experience-card {
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(125, 211, 252, 0.3);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(14, 165, 233, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .experience-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3);
+    }
+    
+    .experience-header {
+      background: linear-gradient(90deg, rgba(14, 165, 233, 0.2), rgba(56, 189, 248, 0.2));
+      padding: 20px;
+      border-bottom: 1px solid rgba(125, 211, 252, 0.3);
+    }
+    
+    .experience-body {
+      padding: 25px;
+    }
+    
+    .responsibility-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .responsibility-list li {
+      padding: 10px 0;
+      position: relative;
+      padding-left: 25px;
+    }
+    
+    .responsibility-list li:before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+    }
+    
+    /* Timeline enhancements */
+    .timeline-item {
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(125, 211, 252, 0.3);
+      box-shadow: 0 10px 25px rgba(14, 165, 233, 0.15);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .section {
+        padding: 50px 0;
+      }
+      
+      .profile-img {
+        width: 180px;
+        height: 180px;
+      }
+      
+      .whatsapp-btn {
+        bottom: 90px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .contact-detail {
+        padding: 10px;
+      }
+      
+      .experience-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated background blobs -->
+  <div class="bg-blob bg-blob-1"></div>
+  <div class="bg-blob bg-blob-2"></div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919773484909" target="_blank" class="whatsapp-btn animate__animated animate__bounceIn">
+    <i class="fab fa-whatsapp fa-2x"></i>
+  </a>
+
+  <!-- Back to top button -->
+  <div class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Particles.js Background -->
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header class="py-5 text-center position-relative overflow-hidden">
+    <div class="container">
+      <div class="animate__animated animate__fadeInDown">
+        <img src="profile.jpg" alt="Pruthvi Patel" class="profile-img rounded-circle mb-4 floating">
+        <h1 class="display-4 fw-bold mb-3 glow">Pruthvi Patel</h1>
+        <p class="lead mb-4"><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+        <div class="d-flex justify-content-center mb-4">
+          <p class="mb-0 me-3"><i class="fas fa-envelope me-2"></i> <a href="mailto:prutha1108@gmail.com">prutha1108@gmail.com</a></p>
+          <p class="mb-0"><i class="fas fa-phone me-2"></i> 9773484909</p>
+        </div>
+        <div class="d-flex justify-content-center mb-4">
+          <a href="#" class="download-btn">
+            <i class="fas fa-download me-2"></i> View CV
+          </a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a href="https://github.com/prutha1111" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/pruthvi-patel-314103266" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/prutha1108?s=21" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Pruthvi Patel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#internship">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="home" class="section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 animate__animated animate__fadeInLeft">
+          <h2 class="section-title">About Me</h2>
+          <p class="lead">Hello! I'm Pruthvi Patel, a passionate .NET Developer specializing in ASP.NET Core MVC applications.</p>
+          <p>With expertise in C#, JavaScript, and modern web technologies, I create efficient, scalable, and user-friendly applications. My focus is on delivering high-quality solutions that meet business requirements while providing excellent user experiences.</p>
+          <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and staying updated with the latest trends in software development.</p>
+        </div>
+        <div class="col-lg-6 animate__animated animate__fadeInRight">
+          <img src="profile1.JPG" alt="Pruthvi Patel" class="img-fluid rounded shadow-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title animate__animated animate__fadeInDown">My Projects</h2>
+      <div class="row g-4">
+
+        <div class="col-md-6 animate__animated" data-animation="animate__fadeInUp">
+          <div class="project-card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">Inventory Management System</h5>
+                <span class="badge bg-primary">ASP.NET Core MVC</span>
+              </div>
+              <p class="text-muted"><i class="fas fa-calendar-alt me-2"></i> 2023</p>
+              <div class="description-box" id="desc1">
+                <p>Comprehensive system designed for warehouse administrators with features including:</p>
+                <ul>
+                  <li>Track imports, exports, and product sales in real-time</li>
+                  <li>Full CRUD operations for inventory management</li>
+                  <li>Employee management with role-based access control</li>
+                  <li>Export reports in PDF and Excel formats</li>
+                  <li>Interactive real-time charts for data visualization</li>
+                  <li>Responsive design for all device types</li>
+                </ul>
+              </div>
+              <button class="btn btn-sm btn-outline-primary mt-2 toggle-btn" data-target="desc1">Show Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 animate__animated" data-animation="animate__fadeInUp">
+          <div class="project-card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">Real Estate Management System</h5>
+                <span class="badge bg-success">PHP/MySQL</span>
+              </div>
+              <p class="text-muted"><i class="fas fa-calendar-alt me-2"></i> 2022</p>
+              <div class="description-box" id="desc2">
+                <p>Feature-rich platform for property management with:</p>
+                <ul>
+                  <li>Comprehensive property listings with filters</li>
+                  <li>Builder information and ratings</li>
+                  <li>Inquiry submission system</li>
+                  <li>Interactive map integration for property locations</li>
+                  <li>Secure login/register system</li>
+                  <li>Admin dashboard for content management</li>
+                </ul>
+              </div>
+              <button class="btn btn-sm btn-outline-primary mt-2 toggle-btn" data-target="desc2">Show Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 animate__animated" data-animation="animate__fadeInUp">
+          <div class="project-card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">Online Shoes Store</h5>
+                <span class="badge bg-info">PHP/JS</span>
+              </div>
+              <p class="text-muted"><i class="fas fa-calendar-alt me-2"></i> 2022</p>
+              <div class="description-box" id="desc3">
+                <p>Complete eCommerce solution featuring:</p>
+                <ul>
+                  <li>User authentication system</li>
+                  <li>Product catalog with categories</li>
+                  <li>Wishlist functionality</li>
+                  <li>Shopping cart with checkout process</li>
+                  <li>Product detail pages with zoom</li>
+                  <li>Admin panel for inventory management</li>
+                  <li>File-based database operations</li>
+                </ul>
+              </div>
+              <button class="btn btn-sm btn-outline-primary mt-2 toggle-btn" data-target="desc3">Show Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 animate__animated" data-animation="animate__fadeInUp">
+          <div class="project-card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">Content Management System</h5>
+                <span class="badge bg-secondary">C</span>
+              </div>
+              <p class="text-muted"><i class="fas fa-calendar-alt me-2"></i> 2021</p>
+              <div class="description-box" id="desc4">
+                <p>Terminal-based CMS with robust features:</p>
+                <ul>
+                  <li>Inventory management system</li>
+                  <li>Billing and invoicing</li>
+                  <li>Stock tracking</li>
+                  <li>Full CRUD operations</li>
+                  <li>File handling for data persistence</li>
+                  <li>Structured programming approach</li>
+                </ul>
+              </div>
+              <button class="btn btn-sm btn-outline-primary mt-2 toggle-btn" data-target="desc4">Show Details</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title animate__animated animate__fadeInDown">Technical Skills</h2>
+      <div class="row">
+        <div class="col-md-6 animate__animated" data-animation="animate__fadeInLeft">
+          <h4 class="mb-4"><i class="fas fa-code me-2"></i> Programming Languages</h4>
+          <div>
+            <span class="skill-badge">C</span>
+            <span class="skill-badge">C++</span>
+            <span class="skill-badge">C#</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Python</span>
+          </div>
+          
+          <h4 class="mt-5 mb-4"><i class="fas fa-database me-2"></i> Databases</h4>
+          <div>
+            <span class="skill-badge">SQL</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">SQL Server</span>
+          </div>
+        </div>
+        
+        <div class="col-md-6 animate__animated" data-animation="animate__fadeInRight">
+          <h4 class="mb-4"><i class="fas fa-laptop-code me-2"></i> Web Technologies</h4>
+          <div>
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS3</span>
+            <span class="skill-badge">Bootstrap</span>
+            <span class="skill-badge">jQuery</span>
+            <span class="skill-badge">ASP.NET Core</span>
+            <span class="skill-badge">MVC</span>
+            <span class="skill-badge">PHP</span>
+          </div>
+          
+          <h4 class="mt-5 mb-4"><i class="fas fa-tools me-2"></i> Tools & Frameworks</h4>
+          <div>
+            <span class="skill-badge">Visual Studio</span>
+            <span class="skill-badge">VS Code</span>
+            <span class="skill-badge">SSMS</span>
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">GitHub</span>
+            <span class="skill-badge">.NET Framework</span>
+            <span class="skill-badge">Entity Framework</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title animate__animated animate__fadeInDown">Education</h2>
+      <div class="timeline animate__animated" data-animation="animate__fadeInUp">
+        <div class="timeline-item">
+          <h4>BCA (AI Specialization)</h4>
+          <h5>Parul University</h5>
+          <p class="text-muted"><i class="fas fa-calendar-alt me-2"></i> 2022 - 2025</p>
+          <p>Currently pursuing Bachelor of Computer Applications with specialization in Artificial Intelligence, gaining expertise in machine learning algorithms and AI applications.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Higher Secondary (12th Grade)</h4>
+          <h5>Auxilium Convent High School</h5>
+          <p class="text-muted"><i class="fas fa-calendar-alt me-2"></i> 2022</p>
+          <p>Completed with distinction in Science stream, laying foundation for technical education.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Secondary School (10th Grade)</h4>
+          <h5>Ambe School</h5>
+          <p class="text-muted"><i class="fas fa-calendar-alt me-2"></i> 2020</p>
+          <p>Completed with excellent academic record, developing interest in computer science.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="internship" class="section">
+    <div class="container">
+      <h2 class="section-title animate__animated animate__fadeInDown">Professional Experience</h2>
+      <div class="row animate__animated" data-animation="animate__fadeInUp">
+        <div class="col-lg-10 mx-auto">
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="mb-0">.NET Development Intern</h3>
+              <h5 class="mb-0">Weltec, Sayajigunj, Vadodara</h5>
+              <p class="mb-0"><i class="fas fa-calendar-alt me-2"></i> 6 months (2023)</p>
+            </div>
+            <div class="experience-body">
+              <p class="lead">During my internship, I gained hands-on experience with modern .NET technologies and contributed to real-world projects:</p>
+              
+              <h5 class="mt-4 mb-3">Key Responsibilities & Achievements:</h5>
+              <ul class="responsibility-list">
+                <li>Developed web applications using ASP.NET Core MVC with Entity Framework</li>
+                <li>Implemented RESTful APIs for integration with frontend applications</li>
+                <li>Created responsive UIs with Bootstrap 5 and JavaScript</li>
+                <li>Collaborated with senior developers using Git version control</li>
+                <li>Optimized SQL queries to improve application performance by 35%</li>
+                <li>Participated in daily standups and sprint planning meetings</li>
+                <li>Debugged and fixed critical production issues</li>
+                <li>Documented technical specifications and user guides</li>
+              </ul>
+              
+              <h5 class="mt-4 mb-3">Technologies Used:</h5>
+              <div>
+                <span class="skill-badge">ASP.NET Core </span>
+                <span class="skill-badge">Entity Framework</span>
+                <span class="skill-badge">SQL Server</span>
+                <span class="skill-badge">Bootstrap 5</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">Git</span>
+              </div>
+              
+              <p class="mt-4">This internship provided me with valuable real-world experience in software development and enhanced my problem-solving skills in enterprise environments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title animate__animated animate__fadeInDown">Get In Touch</h2>
+      <div class="row animate__animated" data-animation="animate__fadeInUp">
+        <div class="col-lg-10 mx-auto">
+          <div class="contact-card">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="contact-info">
+                  <h4>Contact Information</h4>
+                  
+                  <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                      <h6 class="mb-0">Location</h6>
+                      <p class="mb-0">Vadodara, Gujarat, India</p>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                      <h6 class="mb-0">Email</h6>
+                      <a href="mailto:prutha1108@gmail.com">prutha1108@gmail.com</a>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                      <h6 class="mb-0">Phone</h6>
+                      <p class="mb-0">+91 9773484909</p>
+                    </div>
+                  </div>
+                  
+                  <div class="contact-detail">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                      <h6 class="mb-0">Availability</h6>
+                      <p class="mb-0">Monday - Friday: 9AM - 6PM</p>
+                    </div>
+                  </div>
+                  
+                  <div class="mt-4">
+                    <h5 class="mb-3">Connect With Me</h5>
+                    <div class="d-flex justify-content-start">
+                      <a href="https://github.com/prutha1111" target="_blank" class="social-icon me-2"><i class="fab fa-github"></i></a>
+                      <a href="https://www.linkedin.com/in/pruthvi-patel-314103266" target="_blank" class="social-icon me-2"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://x.com/prutha1108?s=21" target="_blank" class="social-icon me-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 d-flex align-items-center" style="background: rgba(14, 165, 233, 0.05);">
+                <div class="p-4 w-100">
+                  <h4 class="mb-4">Send Me a Message</h4>
+                  <form id="contactForm">
+                    <div class="mb-3">
+                      <input type="text" class="form-control bg-transparent" placeholder="Your Name" required style="border: 1px solid rgba(125, 211, 252, 0.3);">
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control bg-transparent" placeholder="Your Email" required style="border: 1px solid rgba(125, 211, 252, 0.3);">
+                    </div>
+                    <div class="mb-3">
+                      <input type="text" class="form-control bg-transparent" placeholder="Subject" style="border: 1px solid rgba(125, 211, 252, 0.3);">
+                    </div>
+                    <div class="mb-3">
+                      <textarea class="form-control bg-transparent" rows="4" placeholder="Your Message" required style="border: 1px solid rgba(125, 211, 252, 0.3);"></textarea>
+                    </div>
+                    <button type="submit" class="download-btn w-100">
+                      <i class="fas fa-paper-plane me-2"></i> Send Message
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <p class="mb-2">&copy; 2025 <strong>Pruthvi Patel</strong>. All Rights Reserved.</p>
+      <p class="mb-0">Designed and developed with <i class="fas fa-heart text-danger"></i> by Pruthvi Patel</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  <!-- Typed.js for typing animation -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  
+  <!-- Main Script -->
+  <script>
+    // Initialize particles.js
+    document.addEventListener('DOMContentLoaded', function() {
+      if (document.getElementById('particles-js')) {
+        particlesJS('particles-js', {
+          particles: {
+            number: { value: 120, density: { enable: true, value_area: 1000 } },
+            color: { value: "#0ea5e9" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: true },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, distance: 150, color: "#0ea5e9", opacity: 0.3, width: 1 },
+            move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "grab" },
+              onclick: { enable: true, mode: "push" }
+            }
+          }
+        });
+      }
+      
+      // Typed.js initialization
+      var typed = new Typed('.typed-text', {
+        strings: [".NET Developer", "ASP.NET Core Specialist", "Web Application Developer", "Freelancer", "Problem Solver"],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+      });
+      
+      // Toggle project descriptions
+      document.querySelectorAll('.toggle-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const target = this.getAttribute('data-target');
+          const description = document.getElementById(target);
+          description.classList.toggle('show');
+          this.textContent = description.classList.contains('show') ? 'Hide Details' : 'Show Details';
+        });
+      });
+      
+      // Back to top button
+      const backToTopButton = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('active');
+        } else {
+          backToTopButton.classList.remove('active');
+        }
+      });
+      
+      backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 70,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Navbar background change on scroll
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.style.backgroundColor = 'rgba(15, 23, 42, 0.95)';
+          navbar.classList.add('shadow');
+        } else {
+          navbar.style.backgroundColor = 'transparent';
+          navbar.classList.remove('shadow');
+        }
+      });
+      
+      // Animation on scroll
+      function animateOnScroll() {
+        const elements = document.querySelectorAll('.animate__animated');
+        elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.3;
+          
+          if (elementPosition < screenPosition) {
+            const animation = element.getAttribute('data-animation');
+            if (animation) {
+              element.classList.add(animation);
+            }
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', animateOnScroll);
+      animateOnScroll(); // Run once on page load
+      
+      // Download CV button functionality
+      document.querySelectorAll('.download-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          // In a real scenario, this would download a PDF file
+          alert('Downloading CV... In a real implementation, this would download your CV file.');
+        });
+      });
+      
+      // Contact form submission
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message! I will get back to you soon.');
+        this.reset();
+      });
+    });
+  </script>
+  
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pruthvi Patel",
+      "jobTitle": ".NET Developer",
+      "url": "https://yourportfolio.com",
+      "sameAs": [
+        "https://github.com/prutha1111",
+        "https://www.linkedin.com/in/pruthvi-patel-314103266",
+        "https://x.com/prutha1108?s=21"
+      ],
+      "email": "mailto:prutha1108@gmail.com",
+      "telephone": "+919773484909",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vadodara",
+        "addressRegion": "Gujarat",
+        "addressCountry": "India"
+      }
+    }
+  </script>
+</body>
+</html>
